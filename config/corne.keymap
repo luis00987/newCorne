@@ -60,7 +60,7 @@
             key-positions = <15 14>;
             timeout-ms = <50>;
             require-prior-idle-ms = <100>;
-            layers = <5 7 6>;
+            layers = <5 6 5>;
         };
 
         delR {
@@ -92,7 +92,7 @@
         };
 
         toSym {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <37 40>;
             timeout-ms = <50>;
             slow-release;
@@ -100,7 +100,7 @@
         };
 
         toIpadSC {
-            bindings = <&mo 4>;
+            bindings = <&mo 1>;
             key-positions = <38 39>;
             timeout-ms = <50>;
             slow-release;
@@ -122,21 +122,21 @@
         };
 
         Rhand {
-            bindings = <&mo 1>;
+            bindings = <&mo 10>;
             key-positions = <38 16>;
             timeout-ms = <50>;
             slow-release;
         };
 
         LHand {
-            bindings = <&mo 1>;
+            bindings = <&mo 10>;
             key-positions = <19 39>;
             timeout-ms = <50>;
             slow-release;
         };
 
         moMouse {
-            bindings = <&mo 9>;
+            bindings = <&mo 8>;
             key-positions = <14 15 16 38>;
             timeout-ms = <180>;
             slow-release;
@@ -144,7 +144,7 @@
         };
 
         toLeftNav-Media {
-            bindings = <&mo 10>;
+            bindings = <&mo 0>;
             key-positions = <38 2 3 4>;
             timeout-ms = <180>;
             slow-release;
@@ -152,7 +152,7 @@
         };
 
         toAdj {
-            bindings = <&mo 8>;
+            bindings = <&mo 7>;
             key-positions = <38 13 14 15 16>;
             timeout-ms = <180>;
             slow-release;
@@ -200,6 +200,7 @@
             flavor = "balanced";
             hold-while-undecided;
         };
+
         tapSk_holdLayer: tapSk_holdLayer {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPSK_HOLDLAYER";
@@ -215,7 +216,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LTHUMB";
             #binding-cells = <0>;
-            bindings = <&tapSk_holdLayer 2 LEFT_SHIFT>, <&lt 3 LG(SPACE)>;
+            bindings = <&tapSk_holdLayer 4 LEFT_SHIFT>, <&lt 2 LG(SPACE)>;
 
             tapping-term-ms = <380>;
         };
@@ -229,25 +230,16 @@
 &none  &kp Q            &kp W            &kp E                &kp R              &kp T                         &kp Y        &kp U              &kp I                &kp O            &kp P                    &none
 &none  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                         &kp H        &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SEMICOLON  &none
 &none  &kp Z            &kp X            &kp C                &kp V              &kp B                         &kp N        &kp M              &kp COMMA            &kp DOT          &kp SLASH                &none
-                                         &none                &lt 2 TAB          &stickShiftlt 3 LEFT_SHIFT    &lt 5 SPACE  &lt 6 RET          &none
+                                         &none                &lt 4 TAB          &stickShiftlt 2 LEFT_SHIFT    &lt 5 SPACE  &lt 5 RET          &none
             >;
         };
 
-        singleHandMods {
+        macSC {
             bindings = <
-&none  &none         &none     &none      &none      &none    &none  &none      &none      &none     &none         &none
-&none  &sk LEFT_WIN  &sk LALT  &sk LCTRL  &sk LSHFT  &none    &none  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LEFT_WIN  &none
-&none  &kp LEFT_WIN  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LEFT_WIN  &none
-                               &none      &none      &none    &none  &none      &none
-            >;
-        };
-
-        fnMods {
-            bindings = <
-&none  &none        &kp F7  &kp F8  &kp F9  &kp F12    &none            &none           &none      &none     &none         &none
-&none  &none        &kp F4  &kp F5  &kp F6  &kp F11    &kp PRINTSCREEN  &sk LEFT_SHIFT  &sk LCTRL  &sk LALT  &sk LEFT_GUI  &none
-&none  &key_repeat  &kp F1  &kp F2  &kp F3  &kp F10    &kp CAPS         &kp LEFT_SHIFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &none
-                            &none   &none   &none      &none            &none           &none
+&none  &kp LS(LA(LC(LG(LEFT))))  &kp LG(LS(LC(LA(RIGHT))))  &kp LC(LG(LA(A)))         &kp LC(LG(LA(B)))     &kp LG(LC(D))    &none  &none  &none  &none  &none  &none
+&none  &kp LG(A)                 &kp LG(X)                  &kp LG(C)                 &kp LG(V)             &kp LG(E)        &none  &none  &none  &none  &none  &none
+&none  &kp LG(Z)                 &kp LG(LS(N5))             &kp LG(LS(LC(NUMBER_4)))  &kp LG(D)             &kp LG(Q)        &none  &none  &none  &none  &none  &none
+                                                            &none                     &kp LG(LEFT_BRACKET)  &none            &none
             >;
         };
 
@@ -260,12 +252,12 @@
             >;
         };
 
-        ipadSC {
+        fnMods {
             bindings = <
-&none &kp LS(LA(LC(LG(LEFT))))  &kp LG(LS(LC(LA(RIGHT))))  &kp LC(LG(LA(A)))         &kp LC(LG(LA(B)))     &kp LG(LC(D))    &none  &none  &none  &none  &none &none  
-&none &kp LG(A)                 &kp LG(X)                  &kp LG(C)                 &kp LG(V)             &kp LG(E)        &none  &none  &none  &none  &none &none  
-&none  &kp LG(Z)                 &kp LG(LS(N5))             &kp LG(LS(LC(NUMBER_4)))  &kp LG(D)             &kp LG(Q)        &none  &none  &none  &none  &none &none 
-                                                                               &kp LG(LEFT_BRACKET)  &none            &none  &none
+&none  &none        &kp F7  &kp F8  &kp F9  &kp F12    &none            &none           &none      &none     &none         &none
+&none  &none        &kp F4  &kp F5  &kp F6  &kp F11    &kp PRINTSCREEN  &sk LEFT_SHIFT  &sk LCTRL  &sk LALT  &sk LEFT_GUI  &none
+&none  &key_repeat  &kp F1  &kp F2  &kp F3  &kp F10    &kp CAPS         &kp LEFT_SHIFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &none
+                            &none   &none   &none      &none            &none           &none
             >;
         };
 
@@ -314,12 +306,21 @@
             >;
         };
 
+        singleHandMods {
+            bindings = <
+&none  &none         &none     &none      &none      &none    &none  &none      &none      &none     &none         &none
+&none  &sk LEFT_WIN  &sk LALT  &sk LCTRL  &sk LSHFT  &none    &none  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LEFT_WIN  &none
+&none  &kp LEFT_WIN  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LEFT_WIN  &none
+                               &none      &none      &none    &none  &none      &none
+            >;
+        };
+
         leftNav-Media {
             bindings = <
 &none  &kp C_MUTE       &kp HOME        &kp UP      &kp END     &kp C_VOLUME_UP    &kp C_VOLUME_UP  &none  &none  &none  &none  &none
-&none  &kp LS(LC(TAB))  &kp LEFT        &kp DOWN    &kp RIGHT   &kp LC(TAB)        &none  &none  &none  &none  &none  &none
-&none  &kp LEFT_SHIFT   &kp C_PREVIOUS  &kp C_PLAY  &kp C_NEXT  &kp C_VOL_DN       &none  &none  &none  &none  &none  &none
-                                        &none       &none       &none              &none  &none  &none
+&none  &kp LS(LC(TAB))  &kp LEFT        &kp DOWN    &kp RIGHT   &kp LC(TAB)        &none            &none  &none  &none  &none  &none
+&none  &kp LEFT_SHIFT   &kp C_PREVIOUS  &kp C_PLAY  &kp C_NEXT  &kp C_VOL_DN       &none            &none  &none  &none  &none  &none
+                                        &none       &none       &none              &none            &none  &none
             >;
         };
     };
