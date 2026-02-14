@@ -135,7 +135,7 @@
         };
 
         toLeftNav-Media {
-            bindings = <&mo 0>;
+            bindings = <&mo 10>;
             key-positions = <38 2 3 4>;
             timeout-ms = <180>;
             slow-release;
