@@ -60,7 +60,6 @@
             key-positions = <15 14>;
             timeout-ms = <50>;
             require-prior-idle-ms = <100>;
-            layers = <5 6 5>;
         };
 
         delR {
@@ -91,16 +90,8 @@
             require-prior-idle-ms = <100>;
         };
 
-        toSym {
+        toSymb {
             bindings = <&mo 6>;
-            key-positions = <37 40>;
-            timeout-ms = <50>;
-            slow-release;
-            require-prior-idle-ms = <100>;
-        };
-
-        toIpadSC {
-            bindings = <&mo 1>;
             key-positions = <38 39>;
             timeout-ms = <50>;
             slow-release;
@@ -137,7 +128,7 @@
 
         moMouse {
             bindings = <&mo 8>;
-            key-positions = <14 15 16 38>;
+            key-positions = <>;
             timeout-ms = <180>;
             slow-release;
             require-prior-idle-ms = <80>;
@@ -153,7 +144,7 @@
 
         toAdj {
             bindings = <&mo 7>;
-            key-positions = <38 13 14 15 16>;
+            key-positions = <1 5>;
             timeout-ms = <180>;
             slow-release;
             require-prior-idle-ms = <80>;
