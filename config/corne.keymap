@@ -202,7 +202,7 @@
 &none  &kp Q            &kp W            &kp E                &kp R              &kp T      &kp Y        &kp U              &kp I                &kp O            &kp P                    &none
 &none  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G      &kp H        &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SEMICOLON  &none
 &none  &kp Z            &kp X            &kp C                &kp V              &kp B      &kp N        &kp M              &kp COMMA            &kp DOT          &kp SLASH                &none
-                                         &none                &lt 4 TAB          &LTHUMB    &lt 5 SPACE  &lt 5 RET          &none
+                                         &none                &lt 4 TAB          &LTHUMB    &lt 4 SPACE  &lt 5 RET          &none
             >;
         };
 
@@ -211,7 +211,7 @@
 &none  &kp LS(LA(LC(LG(LEFT))))  &kp LG(LS(LC(LA(RIGHT))))  &kp LC(LG(LA(A)))         &kp LC(LG(LA(B)))     &kp LG(LC(D))    &none  &none  &none  &none  &none  &none
 &none  &kp LG(A)                 &kp LG(X)                  &kp LG(C)                 &kp LG(V)             &kp LG(E)        &none  &none  &none  &none  &none  &none
 &none  &kp LG(Z)                 &kp LG(LS(N5))             &kp LG(LS(LC(NUMBER_4)))  &kp LG(D)             &kp LG(Q)        &none  &none  &none  &none  &none  &none
-                                                            &none                     &kp LG(LEFT_BRACKET)  &none            &none
+                                                            &kp LA(LC(DOWN))          &kp LG(LEFT_BRACKET)  &none            &none
             >;
         };
 
