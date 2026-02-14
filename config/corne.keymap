@@ -126,14 +126,6 @@
             slow-release;
         };
 
-        moMouse {
-            bindings = <&mo 8>;
-            key-positions = <>;
-            timeout-ms = <180>;
-            slow-release;
-            require-prior-idle-ms = <80>;
-        };
-
         toLeftNav-Media {
             bindings = <&mo 10>;
             key-positions = <38 2 3 4>;
