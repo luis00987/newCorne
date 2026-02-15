@@ -141,6 +141,13 @@
             slow-release;
             require-prior-idle-ms = <80>;
         };
+
+        appWindows {
+            bindings = <&kp LA(LC(DOWN))>;
+            key-positions = <13 37>;
+            timeout-ms = <50>;
+            slow-release;
+        };
     };
 
     behaviors {
