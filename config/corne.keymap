@@ -201,6 +201,28 @@
             bindings = <&none>;
             label = "NEW_MACRO";
         };
+        dictation: dictation {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp CAPS &kp D>,
+                <&macro_release>,
+                <&kp D &kp CAPSLOCK>;
+
+            label = "DICTATION";
+        };
+        siri: siri {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp CAPS &kp SPACE>,
+                <&macro_release>,
+                <&kp SPACE &kp CAPS>;
+
+            label = "SIRI";
+        };
     };
 
     keymap {
