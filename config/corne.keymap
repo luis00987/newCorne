@@ -1,4 +1,3 @@
-
 #undef ZMK_BEHAVIORS_KEEP_ALL
 
 #define ZMK_BEHAVIORS_KEEP_SK
@@ -236,7 +235,7 @@
 &none  &kp Q            &kp W            &kp E                &kp R              &kp T          &kp Y        &kp U              &kp I                &kp O            &kp P                    &none
 &none  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &hml CLCK G    &hmr CLCK H  &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SEMICOLON  &none
 &none  &kp Z            &kp X            &kp C                &kp V              &kp B          &kp N        &kp M              &kp COMMA            &kp DOT          &kp SLASH                &none
-                                         &none                &lt 4 TAB          &LTHUMB        &lt 4 SPACE  &lt 5 RET          &none
+                                         &none                &lt 3 TAB          &LTHUMB        &lt 4 SPACE  &lt 5 RET          &none
             >;
         };
 
@@ -296,10 +295,10 @@
 
         adj {
             bindings = <
-&none  &none         &none         &kp C_BRI_DEC  &kp C_BRI_UP  &none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &none  &none  &none  &none  &none    &none        &none  &none  &none  &none  &none
-&none  &none         &none         &none          &none         &out OUT_TOG    &none        &none  &none  &none  &none  &none
-                                   &none          &bt BT_CLR    &bootloader     &bootloader  &none  &none
+&none  &none  &none  &none  &none  &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
+&none  &none  &none  &none  &none  &none          &none         &kp C_BRI_UP  &kp C_BRI_DN  &none         &bt BT_CLR    &none
+&none  &none  &none  &none  &none  &none          &none         &none         &none         &none         &out OUT_TOG  &none
+                     &none  &none  &bootloader    &bootloader   &none         &none
             >;
         };
 
@@ -314,10 +313,10 @@
 
         singleHandMods {
             bindings = <
-&none  &none         &none     &none      &none      &none    &none  &none      &none      &none     &none         &none
-&none  &sk LEFT_WIN  &sk LALT  &sk LCTRL  &sk LSHFT  &none    &none  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LEFT_WIN  &none
-&none  &kp LEFT_WIN  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LEFT_WIN  &none
-                               &none      &none      &none    &none  &none      &none
+&none  &none         &none     &none      &none      &none       &none     &none      &none      &none     &none         &none
+&none  &sk LEFT_WIN  &sk LALT  &sk LCTRL  &sk LSHFT  &sk CLCK    &sk CLCK  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LEFT_WIN  &none
+&none  &kp LEFT_WIN  &kp LALT  &kp LCTRL  &kp LSHFT  &kp CLCK    &kp CLCK  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LEFT_WIN  &none
+                               &none      &none      &none       &none     &none      &none
             >;
         };
 
