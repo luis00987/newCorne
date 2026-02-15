@@ -204,20 +204,13 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SUPERNWINDOWS";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(LG(LEFT_SHIFT)))>, <&mo 1>;
+            bindings = <&kp LC(LA(LG(LEFT_SHIFT)))>, <&mo 12>;
 
             tapping-term-ms = <380>;
         };
     };
 
     macros {
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "NEW_MACRO";
-        };
-
         dictation: dictation {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -240,6 +233,18 @@
                 <&kp SPACE &kp CAPS>;
 
             label = "SIRI";
+        };
+
+        fullScreen: fullScreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp CAPS &kp F>,
+                <&macro_release>,
+                <&kp F &kp CAPS>;
+
+            label = "FULLSCREEN";
         };
     };
 
