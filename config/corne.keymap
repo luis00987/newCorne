@@ -199,6 +199,15 @@
 
             tapping-term-ms = <380>;
         };
+
+        superNwindows: superNwindows {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SUPERNWINDOWS";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(LEFT_SHIFT)))>, <&mo 1>;
+
+            tapping-term-ms = <380>;
+        };
     };
 
     macros {
@@ -251,7 +260,7 @@
 &none  &kp LS(LA(LC(LG(LEFT))))  &kp LG(LS(LC(LA(RIGHT))))  &kp LC(LG(LA(A)))         &kp LC(LG(LA(B)))     &kp LG(LC(D))    &none  &none  &none  &none  &none  &none
 &none  &kp LG(A)                 &kp LG(X)                  &kp LG(C)                 &kp LG(V)             &kp LG(E)        &none  &none  &none  &none  &none  &none
 &none  &kp LG(Z)                 &kp LG(LS(N5))             &kp LG(LS(LC(NUMBER_4)))  &kp LG(D)             &kp LG(Q)        &none  &none  &none  &none  &none  &none
-                                                            &kp LA(LC(DOWN))          &kp LG(LEFT_BRACKET)  &none            &none
+                                                            &none                     &kp LG(LEFT_BRACKET)  &none            &none
             >;
         };
 
@@ -342,6 +351,15 @@
 &none  &kp SEMI  &kp L    &kp K      &kp J      &kp H        &none  &none  &none  &none  &none  &none
 &none  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N        &none  &none  &none  &none  &none  &none
                           &none      &kp ENTER  &kp SPACE    &none  &none  &none
+            >;
+        };
+
+        rectangleSnap {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
