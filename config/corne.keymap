@@ -264,7 +264,7 @@
 &none  &kp Q            &kp W            &kp E                &kp R              &kp T          &kp Y        &kp U              &kp I                &kp O            &kp P                    &none
 &none  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &hml CLCK G    &hmr CLCK H  &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SEMICOLON  &none
 &none  &kp Z            &kp X            &kp C                &kp V              &kp B          &kp N        &kp M              &kp COMMA            &kp DOT          &kp SLASH                &none
-                                         &rectangleFn         &lt 13 TAB         &LTHUMB        &lt 4 SPACE  &lt 5 RET          &none
+                                         &rectangleFn         &lt 3 TAB          &LTHUMB        &lt 4 SPACE  &lt 5 RET          &none
             >;
         };
 
