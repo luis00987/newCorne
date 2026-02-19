@@ -384,14 +384,5 @@
                                                       &kp LA(LC(DOWN))       &trans                 &trans                   &trans                 &trans                 &trans
             >;
         };
-
-        textNavigation {
-            bindings = <
-&none  &none     &none     &none     &none     &none    &none  &none      &none      &none      &none      &none
-&none  &kp LEFT  &kp LEFT  &kp LEFT  &kp LEFT  &none    &none  &kp RIGHT  &kp RIGHT  &kp RIGHT  &kp RIGHT  &none
-&none  &none     &none     &none     &none     &none    &none  &none      &none      &none      &none      &none
-                           &none     &none     &none    &none  &none      &none
-            >;
-        };
     };
 };
