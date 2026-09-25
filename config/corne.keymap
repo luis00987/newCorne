@@ -10,7 +10,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 
 &sk {
     quick-release;
@@ -113,21 +112,21 @@
         };
 
         Rhand {
-            bindings = <&mo 10>;
+            bindings = <&mo 9>;
             key-positions = <38 16>;
             timeout-ms = <50>;
             slow-release;
         };
 
         LHand {
-            bindings = <&mo 10>;
+            bindings = <&mo 9>;
             key-positions = <19 39>;
             timeout-ms = <50>;
             slow-release;
         };
 
         toLeftNav-Media {
-            bindings = <&mo 11>;
+            bindings = <&mo 10>;
             key-positions = <38 2 3 4>;
             timeout-ms = <180>;
             slow-release;
@@ -150,7 +149,7 @@
         };
 
         moRightToLeft {
-            bindings = <&sl 12>;
+            bindings = <&sl 11>;
             key-positions = <14 15 16>;
             timeout-ms = <50>;
             slow-release;
@@ -252,7 +251,7 @@
 &none  &kp Q            &kp W            &kp E                &kp R              &kp T          &kp Y        &kp U              &kp I                &kp O            &kp P                    &none
 &none  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &hml CLCK G    &hmr CLCK H  &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SEMICOLON  &none
 &none  &kp Z            &kp X            &kp C                &kp V              &kp B          &kp N        &kp M              &kp COMMA            &kp DOT          &kp SLASH                &none
-                                         &mo 4                &lt 14 TAB         &LThumbMac     &lt 5 SPACE  &lt 6 RET          &key_repeat
+                                         &mo 4                &lt 12 TAB         &LThumbMac     &lt 5 SPACE  &lt 6 RET          &key_repeat
             >;
         };
 
@@ -270,7 +269,7 @@
 &none  &kp Q            &kp W            &kp E                &kp R              &kp T          &kp Y        &kp U              &kp I                &kp O            &kp P                    &none
 &none  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &hml CLCK G    &hmr CLCK H  &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SEMICOLON  &none
 &none  &kp Z            &kp X            &kp C                &kp V              &kp B          &kp N        &kp M              &kp COMMA            &kp DOT          &kp SLASH                &none
-                                         &mo 4                &lt 14 TAB         &LThumbWin     &lt 5 SPACE  &lt 6 RET          &key_repeat
+                                         &mo 4                &lt 12 TAB         &LThumbWin     &lt 5 SPACE  &lt 6 RET          &key_repeat
             >;
         };
 
@@ -328,15 +327,6 @@
             >;
         };
 
-        mouseLayer {
-            bindings = <
-&none  &none             &none     &none     &none     &none    &none  &none  &none  &none  &none  &none
-&none  &kp LEFT_SHIFT    &mkp MB2  &mkp MB3  &mkp MB1  &none    &none  &none  &none  &none  &none  &none
-&none  &kp LEFT_CONTROL  &none     &none     &none     &none    &none  &none  &none  &none  &none  &none
-                                   &none     &none     &none    &none  &none  &none
-            >;
-        };
-
         singleHandMods {
             bindings = <
 &none  &none         &none     &none      &none      &none       &none     &none      &none      &none     &none         &none
@@ -348,10 +338,10 @@
 
         leftNav-Media {
             bindings = <
-&none  &kp C_MUTE       &kp HOME        &kp UP      &kp END     &kp C_VOLUME_UP    &kp C_VOLUME_UP  &none  &none  &none  &none  &none
-&none  &kp LS(LC(TAB))  &kp LEFT        &kp DOWN    &kp RIGHT   &kp LC(TAB)        &none            &none  &none  &none  &none  &none
-&none  &kp LEFT_SHIFT   &kp C_PREVIOUS  &kp C_PLAY  &kp C_NEXT  &kp C_VOL_DN       &none            &none  &none  &none  &none  &none
-                                        &none       &none       &none              &none            &none  &none
+&none  &kp C_MUTE       &kp HOME        &kp UP      &kp END     &kp C_VOLUME_UP    &none  &none  &none  &none  &none  &none
+&none  &kp LS(LC(TAB))  &kp LEFT        &kp DOWN    &kp RIGHT   &kp LC(TAB)        &none  &none  &none  &none  &none  &none
+&none  &kp LG(W)        &kp C_PREVIOUS  &kp C_PLAY  &kp C_NEXT  &kp C_VOL_DN       &none  &none  &none  &none  &none  &none
+                                        &none       &none       &none              &none  &none  &none
             >;
         };
 
@@ -361,15 +351,6 @@
 &none  &kp SEMI  &kp L    &kp K      &kp J      &kp H        &none  &none  &none  &none  &none  &none
 &none  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N        &none  &none  &none  &none  &none  &none
                           &none      &kp ENTER  &kp SPACE    &none  &none  &none
-            >;
-        };
-
-        rectangleSnap {
-            bindings = <
-&none  &none          &none                     &fullScreen        &none                      &none            &none  &none  &none  &none  &none  &none
-&none  &none          &kp LS(LG(LC(LA(LEFT))))  &kp LA(LC(ENTER))  &kp LS(LG(LC(LA(RIGHT))))  &none            &none  &none  &none  &none  &none  &none
-&none  &kp LA(LC(E))  &kp LA(LC(D))             &kp LA(LC(F))      &kp LA(LC(G))              &kp LA(LC(T))    &none  &none  &none  &none  &none  &none
-                                                &none              &none                      &none            &none  &none  &none
             >;
         };
 
