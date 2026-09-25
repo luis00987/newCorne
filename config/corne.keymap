@@ -229,41 +229,6 @@
     };
 
     macros {
-        dictation: dictation {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp CAPS &kp D>,
-                <&macro_release>,
-                <&kp D &kp CAPSLOCK>;
-
-            label = "DICTATION";
-        };
-
-        siri: siri {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp CAPS &kp SPACE>,
-                <&macro_release>,
-                <&kp SPACE &kp CAPS>;
-
-            label = "SIRI";
-        };
-
-        fullScreen: fullScreen {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp CAPS &kp F>,
-                <&macro_release>,
-                <&kp F &kp CAPS>;
-
-            label = "FULLSCREEN";
-        };
         windowsMissionControl: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -311,19 +276,19 @@
 
         winSC {
             bindings = <
-&none  &kp LC(LG(F4))  &kp LG(TAB)    &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &kp LC(LG(D))    &none  &none  &none  &none  &none  &none
-&none  &kp LC(A)       &kp LC(X)      &kp LC(C)         &kp LC(V)          &kp LG(E)        &none  &none  &none  &none  &none  &none
-&none  &kp LC(Z)       &kp C_AC_HOME  &kp LG(LS(S))     &kp LG(D)          &kp LA(F4)       &none  &none  &none  &none  &none  &none
-                                      &none             &none              &none            &none  &none  &none
+&none  &kp LC(LG(F4))  &kp LG(LC(D))  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &windowsMissionControl    &none  &none  &none  &none  &none  &none
+&none  &kp LC(A)       &kp LC(X)      &kp LC(C)         &kp LC(V)          &kp LG(E)                 &none  &none  &none  &none  &none  &none
+&none  &kp LC(Z)       &kp C_AC_HOME  &kp LG(LS(S))     &kp LG(D)          &kp LA(F4)                &none  &none  &none  &none  &none  &none
+                                      &none             &none              &none                     &none  &none  &none
             >;
         };
 
         fn {
             bindings = <
-&none  &siri        &kp F7  &kp F8  &kp F9  &kp F12    &none     &none           &none      &none     &none         &none
-&none  &dictation   &kp F4  &kp F5  &kp F6  &kp F11    &sk CLCK  &sk LEFT_SHIFT  &sk LCTRL  &sk LALT  &sk LEFT_GUI  &none
-&none  &key_repeat  &kp F1  &kp F2  &kp F3  &kp F10    &kp CAPS  &kp LEFT_SHIFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &none
-                            &none   &none   &none      &none     &none           &none
+&none  &none  &kp F7  &kp F8  &kp F9  &kp F12    &none     &none           &none      &none     &none         &none
+&none  &none  &kp F4  &kp F5  &kp F6  &kp F11    &sk CLCK  &sk LEFT_SHIFT  &sk LCTRL  &sk LALT  &sk LEFT_GUI  &none
+&none  &none  &kp F1  &kp F2  &kp F3  &kp F10    &kp CAPS  &kp LEFT_SHIFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &none
+                      &none   &none   &none      &none     &none           &none
             >;
         };
 
@@ -358,7 +323,7 @@
             bindings = <
 &none  &none  &none  &none  &none  &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
 &none  &none  &none  &none  &none  &none          &none         &kp C_BRI_UP  &kp C_BRI_DN  &none         &bt BT_CLR    &none
-&none  &none  &none  &none  &none  &none          &none         &none         &none         &none         &out OUT_TOG  &none
+&none  &none  &none  &none  &none  &none          &none         &to 0         &to 2         &none         &out OUT_TOG  &none
                      &none  &none  &bootloader    &bootloader   &none         &none
             >;
         };
