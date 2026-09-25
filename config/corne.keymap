@@ -199,20 +199,30 @@
             hold-while-undecided;
         };
 
-        LTHUMB: LTHUMB {
+        LThumbMac: LThumbMac {
             compatible = "zmk,behavior-tap-dance";
-            label = "LTHUMB";
+            label = "LTHUMBMAC";
             #binding-cells = <0>;
-            bindings = <&tapSk_holdLayer 1 LEFT_SHIFT>, <&lt 2 LG(SPACE)>;
+            bindings = <&tapSk_holdLayer 1 LEFT_SHIFT>, <&lt 3 LG(SPACE)>;
 
             tapping-term-ms = <380>;
         };
 
-        rectangleFn: rectangleFn {
+        tapToHoldMo: tapToHoldMo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPTOHOLDMO";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            hold-while-undecided;
+            bindings = <&mo>, <&to>;
+        };
+
+        LThumbWin: LThumbWin {
             compatible = "zmk,behavior-tap-dance";
-            label = "RECTANGLEFN";
+            label = "LTHUMBWIN";
             #binding-cells = <0>;
-            bindings = <&mo 12>, <&mo 3>;
+            bindings = <&tapSk_holdLayer 3 LEFT_SHIFT>, <&lt 0 LEFT_WIN>;
 
             tapping-term-ms = <380>;
         };
