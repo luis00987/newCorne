@@ -244,7 +244,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LTHUMBMAC";
             #binding-cells = <0>;
-            bindings = <&tapSk_holdLayer 1 LEFT_SHIFT>, <&lt 4 LG(SPACE)>;
+            bindings = <&tapSk_holdLayer 1 LEFT_SHIFT>, <&lt 3 LG(SPACE)>;
 
             tapping-term-ms = <380>;
         };
@@ -263,7 +263,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LTHUMBWIN";
             #binding-cells = <0>;
-            bindings = <&tapSk_holdLayer 4 LEFT_SHIFT>, <&lt 0 LEFT_WIN>;
+            bindings = <&tapSk_holdLayer 3 LEFT_SHIFT>, <&lt 1 LEFT_WIN>;
 
             tapping-term-ms = <380>;
         };
